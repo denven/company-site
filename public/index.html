@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+    <title>Marvalous</title>
+</head>
+<body>
+    <header>    
+        <div class="logo">Marvalous Tech</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Products</a>
+            <a href="#">Services</a>
+            <a href="#">Teams</a>
+            <a href="#">Events</a>
+            <i class="fas fa-search"></i>
+        </nav>
+        <!-- NAV for mobile view -->
+        <div class="burger">
+            <div class="buger-line">1</div>
+            <div class="buger-line">2</div>
+            <div class="buger-line">3</div>
+        </div>
+    </header>
+    <div class="glide">
+        <!-- Track of slides -->
+        <div class="glide__track" data-glide-el="track">
+            <div class="glide__slides">
+                <!-- Slide 1 -->
+                <div class="glide__slide">
+                    <div class="slide-caption">
+                        <h1>Inovation changes life, Technology makes future.</h1>    
+                        <h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+                        <button class="explore-btn">Explore more</button>
+                        <div class="backdrop"></div>
+                        <img src="/public/assets/images/people-in-couch-1024248.jpg" alt="">
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="glide__slide">
+                    <div class="slide-caption">
+                        <h1>Inovation changes life, Technology makes future.</h1>    
+                        <h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+                        <button class="explore-btn">Explore more</button>
+                        <div class="backdrop"></div>
+                        <video src="/public/assets/videos/working-man.mp4" muted autoplay loop></video>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <!-- Left/Right Control Buttons -->
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide--left" data-glide-dir="<"><</button>
+            <button class="glide__arrow glide--right" data-glide-dir=">">></button>
+        </div>
+        <!-- Control Bullets at bottom -->
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+        </div>
+    </div>
+    <script src="/src/index.js"></script>
+    
+</body>
+</html>
