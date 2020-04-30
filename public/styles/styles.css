@@ -62,7 +62,6 @@ header .burger{
     top: -80px;
 }
 
-/* Not working for occupying whole screen */
 .glide__slide img, .glide__slide video {
     position: absolute;
     z-index: 50;
@@ -78,7 +77,20 @@ header .burger{
     align-items: center;
  }
 
- /* z-index layers level from top to bottom: header > caption > backdrop > image/video */
+
+.backdrop {
+    position: absolute;
+    z-index: 60;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--backdrop-color);
+    opacity: 0.5;
+}
+
+ /* z-index layers level from top to bottom: header(200) > caption(70) > backdrop(60) > image/video(50) */
 .slide-caption {
     position: aboslute;
     z-index: 70;
@@ -107,16 +119,8 @@ header .burger{
     align-items: flex-end;
 }
 
-.backdrop {
-    position: absolute;
-    z-index: 60;
-
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--backdrop-color);
-    opacity: 0.5;
+.slide-caption > *{
+    opacity: 0;  /* animation initial status */
 }
 
 .explore-btn {
@@ -129,3 +133,11 @@ header .burger{
     cursor: pointer;
     outline: none;
 }
+
+
+
+
+
+
+
+
