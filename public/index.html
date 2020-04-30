@@ -1,77 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="assets/libs/glide/glide.core.min.css">
-    <link rel="stylesheet" href="assets/libs/glide/glide.theme.min.css">
-    <title>Marvalous</title>
-</head>
-<body>
-    <header>    
-        <div class="logo">Marvalous Tech</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Products</a>
-            <a href="#">Services</a>
-            <a href="#">Teams</a>
-            <a href="#">Events</a>
-            <i class="fas fa-search"></i>
-        </nav>
-        <!-- NAV for mobile view -->
-        <div class="burger">
-            <div class="buger-line">1</div>
-            <div class="buger-line">2</div>
-            <div class="buger-line">3</div>
-        </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<link rel="stylesheet" href="assets/libs/glide/glide.core.min.css" />
+		<link rel="stylesheet" href="assets/libs/glide/glide.theme.min.css" />
+		<title>Marvalous</title>
+	</head>
+	<body>
+		<header>
+			<div class="logo">Marvalous Tech</div>
+			<nav>
+				<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#">Products</a>
+				<a href="#">Services</a>
+				<a href="#">Teams</a>
+				<a href="#">Events</a>
+				<i class="fas fa-search"></i>
+			</nav>
+			<!-- NAV for mobile view -->
+			<div class="burger">
+				<div class="buger-line">1</div>
+				<div class="buger-line">2</div>
+				<div class="buger-line">3</div>
+			</div>
+		</header>
 
-    <!-- Use Glide library -->
-    <div class="glide">
-        <!-- Track of slides -->
-        <div class="glide__track" data-glide-el="track">
-            <div class="glide__slides">
-                <!-- Slide 1 -->
-                <div class="glide__slide">
-                    <div class="backdrop"></div>
-                    <div class="slide-caption">
-                        <h1>Inovation changes life</h1>  
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eos!</h3>  
-                        <button class="explore-btn">Explore more</button>
-                    </div>
-                    <img src="assets/images/people-in-couch-1024248.jpg" alt="">
-                </div>
-                <!-- Slide 2 -->
-                <div class="glide__slide">
-                    <div class="backdrop"></div>
-                    <div class="slide-caption left">
-                        <h1>Technology makes future.</h1>    
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut tempore cupiditate autem aliquid.</h3>
-                        <button class="explore-btn">Explore more</button>
-                    </div>
-                    <video src="assets/videos/working-man.mp4" muted autoplay loop></video>
-                </div>
-            </div>            
-        </div>
-        <!-- Left/Right Control Buttons -->
-        <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
-        </div>
-        <!-- Control Bullets at bottom -->
-        <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-        </div>
-    </div>
+		<!-- Home page: Use Glide library -->
+		<div class="glide">
+			<!-- Track of slides -->
+			<div class="glide__track" data-glide-el="track">
+				<div class="glide__slides">
+					<!-- Slide 1 -->
+					<div class="glide__slide">
+						<div class="backdrop"></div>
+						<div class="slide-caption">
+							<h1>Inovation changes life</h1>
+							<h3>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+								eos!
+							</h3>
+							<button class="explore-btn">Explore more</button>
+						</div>
+						<img src="assets/images/people-in-couch-1024248.jpg" alt="" />
+					</div>
+					<!-- Slide 2 -->
+					<div class="glide__slide">
+						<div class="backdrop"></div>
+						<div class="slide-caption left">
+							<h1>Technology makes future</h1>
+							<h3>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+								tempore cupiditate autem aliquid.
+							</h3>
+							<button class="explore-btn">Explore more</button>
+						</div>
+						<video
+							src="assets/videos/working-man.mp4"
+							muted
+							autoplay
+							loop
+						></video>
+					</div>
+				</div>
+			</div>
+			<!-- Left/Right Control Buttons -->
+			<div class="glide__arrows" data-glide-el="controls">
+				<button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+					<
+				</button>
+				<button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+					>
+				</button>
+			</div>
+			<!-- Control Bullets at bottom -->
+			<div class="glide__bullets" data-glide-el="controls[nav]">
+				<button class="glide__bullet" data-glide-dir="=0"></button>
+				<button class="glide__bullet" data-glide-dir="=1"></button>
+			</div>
+		</div>
 
-    <script src="assets/libs/glide/glide.min.js"></script>
-    <script src="assets/libs/anime/anime.min.js"></script>
-    <script src="/src/index.js"></script>
-    
-</body>
+		<!-- Main Contents: About, Products, Services, Team, Events -->
+		<div class="content-wrapper">
+			<!-- About Part -->
+			<section class="about-us">
+				<h2 class="content-title">About Us</h2>
+				<p class="intro">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dicta
+					ex alias saepe?
+				</p>
+
+				<div class="features">
+					<div class="feature">
+						<i class="fas fa-lightbulb"></i>
+						<h4 class="feature-title">Lorem, ipsum.</h4>
+						<p class="feature-content">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+							quidem.
+						</p>
+					</div>
+					<div class="feature">
+						<i class="fas fa-shopping-cart"></i>
+						<h4 class="feature-title">Eligendi, explicabo!</h4>
+						<p class="feature-content">
+							Aperiam neque, error architecto necessitatibus temporibus minus.
+							Atque, corrupti blanditiis?
+						</p>
+					</div>
+					<div class="feature">
+						<i class="fas fa-chart-line"></i>
+						<h4 class="feature-title">Deleniti, pariatur!</h4>
+						<p class="feature-content">
+							Quis, porro officiis? Dolorem reiciendis, nostrum rem quod tenetur
+							id!
+						</p>
+					</div>
+					<div class="feature">
+						<i class="fas fa-balance-scale"></i>
+						<h4 class="feature-title">Optio, unde!</h4>
+						<p class="feature-content">
+							Dolores possimus vero sit nihil sunt quam harum exercitationem
+							adipisci.
+						</p>
+					</div>
+					<div class="feature">
+						<i class="fas fa-database"></i>
+						<h4 class="feature-title">Tempora, tenetur!</h4>
+						<p class="feature-content">
+							Enim hic neque, optio cum aut quas impedit laboriosam
+							exercitationem.
+						</p>
+					</div>
+					<div class="feature">
+						<i class="fas fa-desktop"></i>
+						<h4 class="feature-title">Quia, dicta!</h4>
+						<p class="feature-content">
+							Dolorem, possimus. Maxime quos commodi quaerat quibusdam
+							voluptatibus voluptatem repudiandae!
+						</p>
+					</div>
+					<div class="feature">
+						<i class="fas fa-cloud"></i>
+						<h4 class="feature-title">Ullam, a?</h4>
+						<p class="feature-content">
+							Eveniet dolorum ut id perspiciatis, nihil facere illo atque
+							placeat.
+						</p>
+					</div>
+					<div class="feature">
+						<i class="fas fa-sms"></i>
+						<h4 class="feature-title">Nulla, maiores.</h4>
+						<p class="feature-content">
+							Quasi eius atque perferendis fugit adipisci at molestiae
+							consequuntur magnam?
+						</p>
+					</div>
+					<div class="feature">
+						<i class="fas fa-server"></i>
+						<h4 class="feature-title">Expedita, facilis!</h4>
+						<p class="feature-content">
+							Porro maxime at fugit illo voluptatum quaerat, culpa sapiente
+							alias.
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<script src="assets/libs/glide/glide.min.js"></script>
+		<script src="assets/libs/anime/anime.min.js"></script>
+		<script src="/src/index.js"></script>
+	</body>
 </html>
