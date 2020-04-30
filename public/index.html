@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
-    <link rel="stylesheet" href="/src/styles/styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="assets/libs/glide/glide.core.min.css">
+    <link rel="stylesheet" href="assets/libs/glide/glide.theme.min.css">
     <title>Marvalous</title>
 </head>
 <body>
@@ -27,6 +29,7 @@
             <div class="buger-line">3</div>
         </div>
     </header>
+    
     <div class="glide">
         <!-- Track of slides -->
         <div class="glide__track" data-glide-el="track">
@@ -48,15 +51,15 @@
                         <h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
                         <button class="explore-btn">Explore more</button>
                         <div class="backdrop"></div>
-                        <video src="/public/assets/videos/working-man.mp4" muted autoplay loop></video>
+                        <video src="assets/videos/working-man.mp4" muted autoplay loop></video>
                     </div>
                 </div>
             </div>            
         </div>
         <!-- Left/Right Control Buttons -->
         <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide--left" data-glide-dir="<"><</button>
-            <button class="glide__arrow glide--right" data-glide-dir=">">></button>
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
         </div>
         <!-- Control Bullets at bottom -->
         <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -64,6 +67,7 @@
             <button class="glide__bullet" data-glide-dir="=1"></button>
         </div>
     </div>
+    <script src="assets/libs/glide/glide.min.js"></script>
     <script src="/src/index.js"></script>
     
 </body>
