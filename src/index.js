@@ -1,3 +1,5 @@
+// For homepage slides
+
 // new Glide('.glide').mount();   // equivalent to the following 2 lines
 const glide = new Glide(".glide");
 
@@ -22,3 +24,22 @@ glide.on(["mount.after", "run.after"], () => {
 });
 
 glide.mount();
+
+// For Products Sectino Images filter & sort layouts
+const isotope = new Isotope(".cases", {
+  layoutMode: "fitRows",
+  itemSelector: ".case-item"
+});
+
+const filterBtns = document.querySelector(".filter-btns");
+filterBtns.addEventListener("click", e => {
+  const filterOption = e.target.getAttribute("data-filter");
+  if (filterOption) {
+    document
+      .querySelectorAll(".filter-btn.active")
+      .forEach(btn => btn.classList.remove("active"));
+    e.target.classList.add("active");
+
+    isotope.arrange({ filter: filterOption });
+  }
+});
