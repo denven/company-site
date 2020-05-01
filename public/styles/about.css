@@ -1,0 +1,47 @@
+/* Section 1: About us */
+.about-us {
+	padding-bottom: 32px;
+}
+
+.intro {
+	margin: 20px 0 30px 0;
+	color: var(--text-color-dark-gray);
+}
+
+.features {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* 3 columns */
+	grid-template-rows: repeat(3, 126px); /* 3 rows */
+	column-gap: 20px;
+	row-gap: 20px;
+}
+
+.feature {
+	display: grid;
+	/* icon takes 2 grids(1 column and 2 rows), title and content each takes 1 grid */
+	grid-template-areas:
+		"icon title"
+		"icon content";
+	grid-template-columns: 60px 1fr; /* 2 columns */
+	grid-template-rows: 1fr 3fr; /* 2 rows */
+}
+
+.feature i.fas {
+	grid-area: icon;
+	/* justify-self: center; */
+	font-size: 30px;
+	color: var(--primary-color);
+}
+
+.feature-title {
+	grid-area: title;
+	/* align-self: center; */
+	font-size: 18px;
+	color: var(--text-color-darker);
+}
+
+.feature-conetent {
+	grid-area: content;
+	color: var(--text-color-gray);
+	margin-top: 8px;
+}

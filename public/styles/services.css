@@ -1,0 +1,97 @@
+/* Section 2: Products */
+.showcases {
+	max-width: unset;
+	padding: 0;
+	/* padding-top: 72px; */
+}
+
+.filter-btns {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.filter-btn {
+	margin: 0 7px;
+	background-color: var(--secondary-color);
+	border: 0;
+	color: var(--text-color-dark-gray);
+	padding: 8px 18px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.filter-btn:focus,
+.filter-btn:active {
+	outline: none;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+.showcases .cases {
+	width: 100vw;
+}
+
+.showcases .case-item {
+	width: 24.5vw;
+	height: 20vw;
+	margin: auto; /* center the div */
+	overflow: hidden;
+}
+
+/* full fit div space */
+.case-item img {
+	height: 100%;
+	margin: 2px;
+	object-fit: cover;
+}
+
+/* Section Services */
+.service {
+	padding-top: 10px;
+}
+
+.services {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/* grid-template-rows: 2fr 2fr; */
+	column-gap: 36px;
+	row-gap: 24px;
+}
+
+.service-item {
+	display: grid;
+	grid-template-areas:
+		"icon title"
+		"icon content";
+	grid-template-columns: 70px 1fr;
+	/* grid-template-rows: 1fr 3fr; */
+	padding: 24px;
+	box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.9);
+}
+
+.service-item i.fas {
+	grid-area: icon;
+	font-size: 30px;
+	color: var(--primary-color);
+	padding-top: 6px;
+}
+
+.service-item .service-title {
+	grid-area: title;
+	color: var(--text-color-darker);
+	font-size: 24px;
+	padding: 3px 0;
+}
+
+.service-item .service-content {
+	grid-area: content;
+	color: var(--text-color-gray);
+	line-height: 30px;
+	font-size: 16px;
+	align-self: start;
+}
