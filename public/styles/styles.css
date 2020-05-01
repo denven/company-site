@@ -30,7 +30,7 @@ header {
 	padding: 0 40px;
 
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	position: relative;
 	z-index: 200; /* on top most */
@@ -39,6 +39,7 @@ header {
 div.logo {
 	font-size: 24px;
 	font-weight: 600;
+	justify-self: start;
 	color: var(--text-color-lightest);
 }
 
@@ -139,31 +140,11 @@ header .burger {
 }
 
 /* Other Contents: several sections inside */
-.content-wrapper {
+.section-wrapper {
 	display: flex;
-	/* align-items: center; */
+	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-}
-
-.content-title {
-	font-size: 34px;
-	color: var(--text-color-darker);
-}
-
-/* Underscore of content-title */
-.content-title::after {
-	content: "";
-	display: block;
-	width: 100%;
-	height: 4px;
-	background-color: var(--primary-color);
-	margin-top: 10px;
-	/* transform: translateX(5%); */
-}
-
-.intro {
-	margin: 20px 0 40px 0;
-	color: var(--text-color-dark-gray);
 }
 
 /* Each part of section */
@@ -174,7 +155,42 @@ section {
 	padding: 0 80px;
 }
 
-/* Section: About us */
+.section-title {
+	font-size: 34px;
+	color: var(--text-color-darker);
+}
+
+/* Section title: Underscore of content-title */
+.section-title::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: var(--primary-color);
+	margin-top: 10px;
+	/* transform: translateX(5%); */
+}
+
+.section-bg {
+	position: relative;
+}
+
+/* .section-bg::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #f9fbfb;
+	width: 100vw;
+	height: 100%;
+	z-index: -1;
+} */
+
+.intro {
+	margin: 20px 0 40px 0;
+	color: var(--text-color-dark-gray);
+}
+
+/* Section 1: About us */
 .about-us {
 	padding-bottom: 32px;
 }
@@ -189,21 +205,24 @@ section {
 
 .feature {
 	display: grid;
+	/* icon takes 2 grids(1 column and 2 rows), title and content each takes 1 grid */
 	grid-template-areas:
 		"icon title"
 		"icon content";
-	grid-template-columns: 60px 1fr;
-	/* grid-template-rows: 1fr 3fr; */
+	grid-template-columns: 60px 1fr; /* 2 columns */
+	grid-template-rows: 1fr 3fr; /* 2 rows */
 }
 
 .feature i.fas {
 	grid-area: icon;
+	/* justify-self: center; */
 	font-size: 30px;
 	color: var(--primary-color);
 }
 
 .feature-title {
 	grid-area: title;
+	/* align-self: center; */
 	font-size: 18px;
 	color: var(--text-color-darker);
 }
@@ -212,4 +231,54 @@ section {
 	grid-area: content;
 	color: var(--text-color-gray);
 	margin-top: 8px;
+}
+
+/* Section 2: Products */
+.showcases {
+	max-width: unset;
+	padding: 0;
+	/* padding-top: 72px; */
+}
+
+.filter-btns {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.filter-btn {
+	margin: 0 7px;
+	background-color: var(--secondary-color);
+	border: 0;
+	color: var(--text-color-dark-gray);
+	padding: 8px 18px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.filter-btn:focus,
+.filter-btn:active {
+	outline: none;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+.showcases .cases {
+	width: 100vw;
+}
+
+.showcases .case-item {
+	width: 25vw;
+	height: 20vw;
+	overflow: hidden;
+}
+
+/* full fit div space */
+.case-item img {
+	height: 100%;
+	object-fit: cover;
 }
