@@ -186,7 +186,7 @@ section {
 } */
 
 .intro {
-	margin: 20px 0 40px 0;
+	margin: 20px 0 30px 0;
 	color: var(--text-color-dark-gray);
 }
 
@@ -242,7 +242,7 @@ section {
 
 .filter-btns {
 	margin-top: 20px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 .filter-btn {
@@ -272,7 +272,7 @@ section {
 }
 
 .showcases .case-item {
-	width: 25vw;
+	width: 24.5vw;
 	height: 20vw;
 	overflow: hidden;
 }
@@ -280,5 +280,6 @@ section {
 /* full fit div space */
 .case-item img {
 	height: 100%;
+	margin: 2px;
 	object-fit: cover;
 }
