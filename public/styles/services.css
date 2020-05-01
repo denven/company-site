@@ -1,58 +1,7 @@
-/* Section 2: Products */
-.showcases {
-	max-width: unset;
-	padding: 0;
-	/* padding-top: 72px; */
-}
-
-.filter-btns {
-	margin-top: 20px;
-	margin-bottom: 30px;
-}
-
-.filter-btn {
-	margin: 0 7px;
-	background-color: var(--secondary-color);
-	border: 0;
-	color: var(--text-color-dark-gray);
-	padding: 8px 18px;
-	border-radius: 4px;
-	cursor: pointer;
-	transition: 0.4s;
-}
-
-.filter-btn:focus,
-.filter-btn:active {
-	outline: none;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-	background-color: var(--primary-color);
-	color: white;
-}
-
-.showcases .cases {
-	width: 100vw;
-}
-
-.showcases .case-item {
-	width: 24.5vw;
-	height: 20vw;
-	margin: auto; /* center the div */
-	overflow: hidden;
-}
-
-/* full fit div space */
-.case-item img {
-	height: 100%;
-	margin: 2px;
-	object-fit: cover;
-}
-
 /* Section Services */
 .service {
 	padding-top: 10px;
+	margin-bottom: 30px;
 }
 
 .services {
