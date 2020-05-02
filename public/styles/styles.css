@@ -1,4 +1,4 @@
-/* Global Settings */
+/* Global Styles */
 
 * {
 	margin: 0;
@@ -102,11 +102,12 @@ section {
 }
 
 .section-bg::before {
-	content: "";
 	display: block;
 	position: absolute;
+	z-index: -1;
+
+	content: "";
 	background-color: #f6fafa;
 	width: 100vw;
 	height: 100%;
-	z-index: -1;
 }
