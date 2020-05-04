@@ -109,4 +109,27 @@ footer {
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
+
+	/* button animation */
+	animation: btnmove 1.5s infinite;
+	/* -webkit-animation: btnmove 1.5s infinite; move every 1.5 seconds */
+}
+
+/* move verticallly to generate animation */
+@keyframes btmove {
+	from {
+		bottom: 20px;
+	}
+	to {
+		bottom: 30px;
+	}
+}
+
+@-webkit-keyframes btnmove {
+	from {
+		bottom: 20px;
+	}
+	to {
+		bottom: 30px;
+	}
 }

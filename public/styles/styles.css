@@ -53,6 +53,7 @@ header nav i {
 }
 
 header nav a {
+	font-weight: 600;
 	color: var(--text-color-lightest);
 	text-decoration: none;
 	margin: 0 24px;

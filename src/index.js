@@ -43,3 +43,28 @@ filterBtns.addEventListener("click", e => {
     isotope.arrange({ filter: filterOption });
   }
 });
+
+const updateScrollBtnPosition = function() {
+  const scrollBtn = document.querySelector(".scrollToTop");
+
+  scrollBtn.style.display = "none";
+
+  window.addEventListener("scroll", function(event) {
+    event.preventDefault();
+    // show button only when it's top is below the App title
+
+    if (this.scrollY > 120) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  // let page go top when user clicked this button
+  scrollBtn.addEventListener("click", e => {
+    e.preventDefault();
+    window.scrollTo(0, 0, "smooth");
+  });
+};
+
+updateScrollBtnPosition();
