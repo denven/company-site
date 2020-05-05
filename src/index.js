@@ -44,6 +44,19 @@ filterBtns.addEventListener("click", e => {
   }
 });
 
+const displayStickyHeader = () => {
+  const headerEle = document.querySelector("header");
+  window.addEventListener("scroll", function(event) {
+    if (window.pageYOffset > 800) {
+      if (!headerEle.classList.contains("stick")) {
+        headerEle.classList.add("sticky");
+      }
+    } else {
+      headerEle.classList.remove("sticky");
+    }
+  });
+};
+
 const updateScrollBtnPosition = function() {
   const scrollBtn = document.querySelector(".scrollToTop");
 
@@ -67,4 +80,5 @@ const updateScrollBtnPosition = function() {
   });
 };
 
+displayStickyHeader();
 updateScrollBtnPosition();

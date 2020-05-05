@@ -92,6 +92,12 @@ footer {
 	padding-bottom: 16px;
 }
 
+.scrollToTop {
+	display: none;
+	position: relative;
+	z-index: 300;
+}
+
 .scrollToTop a {
 	width: 32px;
 	height: 32px;

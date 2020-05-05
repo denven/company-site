@@ -27,7 +27,7 @@ img {
 /* Header and Navigation */
 header {
 	width: 100vw;
-	height: 80px;
+	height: 60px;
 	padding: 0 40px;
 
 	display: grid;
@@ -61,6 +61,40 @@ header nav a {
 
 header .burger {
 	display: none; /* hide burger by default */
+}
+
+header.sticky {
+	position: fixed;
+	background-color: white;
+	box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+
+	animation: dropdown 1s ease-in-out forwards;
+	-webkit-animation: dropdown 1s ease-in-out forwards;
+}
+
+header.sticky .logo,
+header.sticky nav a,
+header.sticky nav i {
+	color: var(--text-color-darker);
+}
+
+/* The animation doesn't work right now */
+@keyframes dropown {
+	from {
+		transform: translateY(-100);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes dropdown {
+	from {
+		transform: translateY(-100);
+	}
+	to {
+		transform: translateY(0);
+	}
 }
 
 /* Glide for homepage */
