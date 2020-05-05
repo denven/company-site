@@ -44,20 +44,20 @@
 	color: var(--text-color-dark-gray);
 }
 
-.social-links {
-	width: 60%;
-	max-width: 240px;
+.team-member .social-links {
+	width: 100%;
+	max-width: 360px;
 	display: flex;
 	justify-content: space-around;
 	padding: 0 42px;
-	margin-bottom: 10px;
+	margin: 15px 0;
 }
 
-.social-links li {
+.team-member .social-links li {
 	list-style: none;
 }
 
-.social-links li a {
+.team-member .social-links li a {
 	color: var(--text-color-dark);
 	/* font-size: 20px; */
 	text-decoration: none;
