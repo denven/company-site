@@ -82,3 +82,45 @@ const updateScrollBtnPosition = function() {
 
 displayStickyHeader();
 updateScrollBtnPosition();
+
+const scrollOption = {
+  delay: 300,
+  distance: "50px",
+  duration: 500,
+  easing: "ease-in-out",
+  origin: "bottom"
+};
+
+// Animations
+ScrollReveal().reveal(".feature", { ...scrollOption, interval: 350 });
+ScrollReveal().reveal(".service-item", { ...scrollOption, interval: 350 });
+ScrollReveal().reveal(".data-section", { ...scrollOption, interval: 350 });
+
+const dataSectionEle = document.querySelector(".data-section");
+ScrollReveal().reveal(".data-section", {
+  beforeReveal: () => {
+    anime({
+      targets: ".data-piece .piece-num",
+      innerHTML: el => {
+        return [0, el.innerHTML];
+      },
+      duration: 2000,
+      round: 1, // increase by 1
+      easing: "easeInExpo"
+    });
+
+    dataSectionEle.style.backgroundPosition = `center calc(50% - ${dataSectionEle.getBoundingClientRect()
+      .bottom / 5}px`;
+  }
+});
+
+window.addEventListener("scroll", () => {
+  const top = dataSectionEle.getBoundingClientRect().top;
+  const bottom = dataSectionEle.getBoundingClientRect().bottom;
+
+  // check element positin visible in browser or not
+  if (bottom >= 0 && top <= window.innerHeight) {
+    dataSectionEle.style.backgroundPosition = `center calc(50% - ${bottom /
+			5}px)`;
+  }
+});
