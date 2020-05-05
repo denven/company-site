@@ -47,10 +47,10 @@
 }
 
 .social-links {
-	width: 100%;
-	max-width: 300px;
+	width: 60%;
+	max-width: 240px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 0 42px;
 }
 
