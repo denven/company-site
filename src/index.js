@@ -47,25 +47,33 @@ filterBtns.addEventListener("click", e => {
 const displayStickyHeader = () => {
   const headerEle = document.querySelector("header");
   window.addEventListener("scroll", function(event) {
-    if (window.pageYOffset > 800) {
-      if (!headerEle.classList.contains("stick")) {
+    if (window.pageYOffset > 600) {
+      if (!headerEle.classList.contains("sticky")) {
         headerEle.classList.add("sticky");
       }
     } else {
       headerEle.classList.remove("sticky");
     }
   });
+
+  // Hide header when clicking page content area
+  // window.addEventListener("click", function(event) {
+  //   if (event.clientY > 100) {
+  //     if (headerEle.classList.contains("sticky")) {
+  //       headerEle.classList.remove("sticky");
+  //     }
+  //   }
+  // });
 };
 
 const updateScrollBtnPosition = function() {
   const scrollBtn = document.querySelector(".scrollToTop");
 
   scrollBtn.style.display = "none";
-
   window.addEventListener("scroll", function(event) {
     event.preventDefault();
-    // show button only when it's top is below the App title
 
+    // show button only when it's top is below the App title
     if (this.scrollY > 120) {
       scrollBtn.style.display = "block";
     } else {
@@ -73,16 +81,18 @@ const updateScrollBtnPosition = function() {
     }
   });
 
+  // This is commented because SmoothScroll lib is used to do this job
   // let page go top when user clicked this button
-  scrollBtn.addEventListener("click", e => {
-    e.preventDefault();
-    window.scrollTo(0, 0, "smooth");
-  });
+  // scrollBtn.addEventListener("click", e => {
+  //   e.preventDefault();
+  //   window.scrollTo(0, 0, "smooth");
+  // });
 };
 
 displayStickyHeader();
 updateScrollBtnPosition();
 
+// Animations by ScrollReaval
 const scrollOption = {
   delay: 300,
   distance: "50px",
@@ -91,10 +101,9 @@ const scrollOption = {
   origin: "bottom"
 };
 
-// Animations
 ScrollReveal().reveal(".feature", { ...scrollOption, interval: 350 });
 ScrollReveal().reveal(".service-item", { ...scrollOption, interval: 350 });
-ScrollReveal().reveal(".data-section", { ...scrollOption, interval: 350 });
+ScrollReveal().reveal(".team-member", { ...scrollOption, interval: 350 });
 
 const dataSectionEle = document.querySelector(".data-section");
 ScrollReveal().reveal(".data-section", {
@@ -123,4 +132,17 @@ window.addEventListener("scroll", () => {
     dataSectionEle.style.backgroundPosition = `center calc(50% - ${bottom /
 			5}px)`;
   }
+});
+
+// Use SmoothScroll lib to generate a scroll effection when clicking anchors
+const scroll = new SmoothScroll('nav a[href*="#"], .scrollToTop a[href*="#"]', {
+  header: "header",
+  offset: 60 // header/nav height
+});
+
+const exploreBtnEles = document.querySelectorAll(".explore-btn");
+exploreBtnEles.forEach(exploreBtnEle => {
+  exploreBtnEle.addEventListener("click", () => {
+    scroll.animateScroll(document.querySelector("#about"));
+  });
 });
