@@ -1,3 +1,8 @@
+- Deployed on EC2 instance by pm2:
+
+  - `pm2 serve company-site/ 5500 --name marvelous`
+  - Access link: http://ec2-54-188-32-115.us-west-2.compute.amazonaws.com:5500/
+
 - Layout
 
   - Header and navigation: Use grid and flex layout
@@ -22,7 +27,7 @@
 
   - Footer: use grid layout
 
-- Animation libraries used
+* Animation libraries used
 
   - anime https://github.com/juliangarnier/anime
   - glide https://github.com/glidejs/glide
@@ -30,6 +35,6 @@
   - scrollReveal https://github.com/jlmakes/scrollreveal
   - smooth-scroll https://github.com/cferdinandi/smooth-scroll
 
-- Undone features
+* Undone features
 
   - write media queries to be responsive to different devices.

@@ -28,7 +28,12 @@ glide.mount();
 // For Products Sectino Images filter & sort layouts
 const isotope = new Isotope(".cases", {
   layoutMode: "fitRows",
+  // percentPosition: true,
   itemSelector: ".case-item"
+  // masonry: {
+  //   columnWidth: ".case-item",
+  //   isFitWidth: true
+  // }
 });
 
 const filterBtns = document.querySelector(".filter-btns");
@@ -47,7 +52,7 @@ filterBtns.addEventListener("click", e => {
 const displayStickyHeader = () => {
   const headerEle = document.querySelector("header");
   window.addEventListener("scroll", function(event) {
-    if (window.pageYOffset > 600) {
+    if (window.pageYOffset > 500) {
       if (!headerEle.classList.contains("sticky")) {
         headerEle.classList.add("sticky");
       }
@@ -114,12 +119,12 @@ ScrollReveal().reveal(".data-section", {
         return [0, el.innerHTML];
       },
       duration: 2000,
-      round: 1, // increase by 1
+      round: 1, // increase by an integer number
       easing: "easeInExpo"
     });
 
     dataSectionEle.style.backgroundPosition = `center calc(50% - ${dataSectionEle.getBoundingClientRect()
-      .bottom / 5}px`;
+      .bottom / 5})px`;
   }
 });
 
@@ -130,14 +135,14 @@ window.addEventListener("scroll", () => {
   // check element positin visible in browser or not
   if (bottom >= 0 && top <= window.innerHeight) {
     dataSectionEle.style.backgroundPosition = `center calc(50% - ${bottom /
-			5}px)`;
+			5})px)`;
   }
 });
 
 // Use SmoothScroll lib to generate a scroll effection when clicking anchors
 const scroll = new SmoothScroll('nav a[href*="#"], .scrollToTop a[href*="#"]', {
   header: "header",
-  offset: 60 // header/nav height
+  offset: 20 // set the value to header/nav's height when header is not shown
 });
 
 const exploreBtnEles = document.querySelectorAll(".explore-btn");
