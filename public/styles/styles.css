@@ -74,8 +74,16 @@ header nav a {
 	margin: 0 12px;
 }
 
-header .burger {
+/* Make a mobile menu by a single div box  */
+header .burger-menu {
 	display: none; /* hide burger by default */
+	width: 30px;
+	height: 6px;
+	border-top: 6px solid #dd575c;
+	border-bottom: 6px solid #dd575c;
+	background-color: #dd575c;
+	padding: 3px 0;
+	background-clip: content-box;
 }
 
 header.sticky {
