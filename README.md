@@ -35,6 +35,8 @@
   - scrollReveal https://github.com/jlmakes/scrollreveal
   - smooth-scroll https://github.com/cferdinandi/smooth-scroll
 
-* Undone features
+* Viewports break points (width) for different devices
 
-  - write media queries to be responsive to different devices.
+  - 768px
+  - 600px
+  - 480px
