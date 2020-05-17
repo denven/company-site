@@ -77,6 +77,14 @@
 }
 
 @media (max-width: 768px) {
+	.slide-caption {
+		padding-bottom: 11rem;
+	}
+
+	.slide-caption.left {
+		align-items: center;
+	}
+
 	.slide-caption h1 {
 		font-size: 2.2rem;
 	}
@@ -90,12 +98,16 @@
 	}
 
 	.explore-btn {
-		padding: 1rem 1.8rem;
+		padding: 1rem 1.4rem;
 		font-size: 1rem;
 	}
 }
 
 @media (max-width: 600px) {
+	.slide-caption {
+		max-width: 85vw;
+	}
+
 	.slide-caption h1 {
 		font-size: 2rem;
 	}
@@ -109,7 +121,7 @@
 	}
 
 	.explore-btn {
-		padding: 0.8rem 1.5rem;
+		padding: 0.6rem 1rem;
 		font-size: 1rem;
 	}
 
@@ -119,6 +131,11 @@
 }
 
 @media (max-width: 480) {
+	.slide-caption {
+		padding-bottom: 8rem;
+		max-width: 100vw;
+	}
+
 	.slide-caption h1 {
 		font-size: 1.5rem;
 	}
@@ -129,11 +146,6 @@
 
 	.slide-caption > * {
 		opacity: 0; /* animation initial status */
-	}
-
-	.explore-btn {
-		padding: 0.6rem 1.3rem;
-		font-size: 1rem;
 	}
 
 	.glide__arrow {
