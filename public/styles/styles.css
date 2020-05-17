@@ -187,9 +187,13 @@ section {
 
 /* ///////////////////////////////////////////////////////////////////////////////// */
 /* break points for different devices */
-@media (max-width: 1023px) {
+@media (max-width: 768px) {
 	header nav {
 		display: none;
+	}
+
+	.section-title {
+		font-size: 28px;
 	}
 
 	header .burger-button {
@@ -237,23 +241,44 @@ section {
 
 		/* opacity: 0.5; This impacts the nav contents and background */
 		/* use rgba with opacity only impacts background color */
-		background-color: rgba(66, 66, 66, 0.5);
+		background-color: rgba(66, 66, 66, 0.2);
 	}
 
-	@keyframes menuSlideDown {
-		from {
-			height: 0;
-			opacity: 0;
-		}
-
-		to {
-			opacity: 0.5;
-		}
+	section {
+		padding: 0 60px;
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
 	header {
 		padding: 0 10px;
+		grid-template-columns: 2fr 1fr;
+	}
+
+	section {
+		padding: 0 40px;
+	}
+
+	.section-title {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 480px) {
+	header div.logo > p {
+		font-size: 18px;
+	}
+
+	header div.logo > img {
+		width: 18px;
+		height: 18px;
+	}
+
+	section {
+		padding: 0 20px;
+	}
+
+	.section-title {
+		font-size: 24px;
 	}
 }

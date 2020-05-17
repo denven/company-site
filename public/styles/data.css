@@ -1,9 +1,9 @@
 .data-section {
 	display: grid;
-	grid-template-columns: repeat(4, minmax(auto, 220px));
+	grid-template-columns: repeat(4, 22.5vw);
 	justify-content: center;
-	/* align-items: center; */
-	align-content: center;
+	align-items: center;
+	/* align-content: center; */
 
 	position: relative; /* mask's parent */
 	z-index: 20;
@@ -39,16 +39,39 @@
 }
 
 .data-piece i.fas {
-	font-size: 44px;
+	font-size: 2.8rem;
+	align-self: center;
 }
 
 .data-piece .piece-num {
-	margin-bottom: 7px;
-	font-size: 41px;
+	margin-top: 10px;
+	font-size: 2.5rem;
 	font-weight: 600;
+	align-self: center;
 }
 
 .data-piece .piece-desc {
-	font-size: 18px;
+	font-size: 1.2rem;
 	font-weight: 500;
+	align-self: center;
+}
+
+@media (max-width: 480px) {
+	.data-section {
+		grid-template-columns: repeat(2, 42.5vw);
+		height: 22rem;
+	}
+
+	.data-piece i.fas {
+		font-size: 2.2rem;
+	}
+
+	.data-piece .piece-num {
+		margin-top: 10px;
+		font-size: 1.8rem;
+	}
+
+	.data-piece .piece-desc {
+		font-size: 1rem;
+	}
 }
