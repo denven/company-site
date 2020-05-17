@@ -47,13 +47,13 @@
 }
 
 .slide-caption h1 {
-	font-size: 36px;
+	font-size: 2.5rem;
 	font-weight: 600;
 }
 
 .slide-caption h3 {
-	font-size: 24px;
-	margin: 48px 0;
+	font-size: 1.5rem;
+	margin: 3rem 0;
 }
 
 .slide-caption.left {
@@ -66,12 +66,77 @@
 }
 
 .explore-btn {
-	padding: 14px 32px;
+	padding: 1rem 2.3rem;
 	background-color: var(--primary-color);
 	border: 0;
 	border-radius: 4px;
-	font-size: 18px;
+	font-size: 1.2rem;
 	color: var(--text-color-lightest);
 	cursor: pointer;
 	outline: none;
+}
+
+@media (max-width: 768px) {
+	.slide-caption h1 {
+		font-size: 2.2rem;
+	}
+
+	.slide-caption h3 {
+		font-size: 1.3rem;
+	}
+
+	.slide-caption > * {
+		opacity: 0; /* animation initial status */
+	}
+
+	.explore-btn {
+		padding: 1rem 1.8rem;
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.slide-caption h1 {
+		font-size: 2rem;
+	}
+
+	.slide-caption h3 {
+		font-size: 1.1rem;
+	}
+
+	.slide-caption > * {
+		opacity: 0; /* animation initial status */
+	}
+
+	.explore-btn {
+		padding: 0.8rem 1.5rem;
+		font-size: 1rem;
+	}
+
+	.glide__arrow {
+		padding: 6px 9px;
+	}
+}
+
+@media (max-width: 480) {
+	.slide-caption h1 {
+		font-size: 1.5rem;
+	}
+
+	.slide-caption h3 {
+		font-size: 1rem;
+	}
+
+	.slide-caption > * {
+		opacity: 0; /* animation initial status */
+	}
+
+	.explore-btn {
+		padding: 0.6rem 1.3rem;
+		font-size: 1rem;
+	}
+
+	.glide__arrow {
+		padding: 4px 6px;
+	}
 }

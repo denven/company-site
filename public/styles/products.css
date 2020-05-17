@@ -6,16 +6,16 @@
 }
 
 .filter-btns {
-	margin-top: 20px;
-	margin-bottom: 30px;
+	margin-top: 1.3rem;
+	margin-bottom: 2rem;
 }
 
 .filter-btn {
-	margin: 0 7px;
+	margin: 0 0.5rem;
 	background-color: var(--secondary-color);
 	border: 0;
 	color: var(--text-color-dark-gray);
-	padding: 8px 18px;
+	padding: 0.5rem 1.2rem;
 	border-radius: 4px;
 	cursor: pointer;
 	transition: 0.4s;
@@ -39,7 +39,6 @@
 .showcases .case-item {
 	width: 24.5vw;
 	height: 20vw;
-	margin: auto; /* center the div */
 	overflow: hidden;
 }
 
@@ -48,4 +47,11 @@
 	height: 100%;
 	margin: 2px;
 	object-fit: cover;
+}
+
+@media (max-width: 768px) {
+	.showcases .case-item {
+		width: 49vw;
+		height: 40vw;
+	}
 }
