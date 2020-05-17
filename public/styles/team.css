@@ -59,8 +59,11 @@
 
 .team-member .social-links li a {
 	color: var(--text-color-dark);
-	/* font-size: 20px; */
 	text-decoration: none;
+}
+
+.social-links i.fab {
+	font-size: 1.2rem;
 }
 
 .team-member:hover {
