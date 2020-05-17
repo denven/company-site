@@ -34,6 +34,7 @@
 	color: var(--text-color-light-gray);
 	font-size: 12px;
 	display: flex;
+	justify-content: space-between;
 }
 
 .event .meta > p:last-child {
