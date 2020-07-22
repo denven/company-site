@@ -124,7 +124,7 @@ footer {
 }
 
 /* move verticallly to generate animation */
-@keyframes btmove {
+@keyframes btnmove {
 	from {
 		bottom: 20px;
 	}
