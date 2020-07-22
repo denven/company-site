@@ -1,7 +1,7 @@
 - Deployed on EC2 instance by pm2:
 
   - `pm2 serve company-site/ 5500 --name marvelous`
-  - Access link: [ec2-54-191-119-231.us-west-2.compute.amazonaws.com:5500/](ec2-54-191-119-231.us-west-2.compute.amazonaws.com:5500)
+  - Access link: http://ec2-54-191-119-231.us-west-2.compute.amazonaws.com:5500/
 
 
 - Layout
