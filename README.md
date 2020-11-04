@@ -1,7 +1,7 @@
 - Deployed on EC2 instance by pm2:
 
   - `pm2 serve company-site/ 5500 --name marvelous`
-  - Access link: http://ec2-54-213-26-33.us-west-2.compute.amazonaws.com:5500/
+  - Access link: [http://ec2-52-27-0-198.us-west-2.compute.amazonaws.com:5500](http://ec2-52-27-0-198.us-west-2.compute.amazonaws.com:5500)
 
 > This address may not be available due to an unsual AWS EC2 instance failure during these days.
 
